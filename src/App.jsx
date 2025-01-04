@@ -8,7 +8,9 @@ function App() {
   return (
     <div>
       <ThreadHeader />
-      <Thread />
+      <div className="threadTable">
+        <Thread />
+      </div>
     </div>
   );
 }
