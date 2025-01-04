@@ -1,4 +1,4 @@
-import "./assets/css/ThreadHeader.css";
+import "../assets/css/ThreadHeader.css";
 
 function ThreadHeader() {
   return (

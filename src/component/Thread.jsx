@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import "./assets/css/Thread.css";
+import "../assets/css/Thread.css";
 
-function Thread() {
+function ThreadList() {
   const [threads, setThreads] = useState([]);
 
   useEffect(() => {
@@ -34,4 +34,4 @@ function Thread() {
   );
 }
 
-export default Thread;
+export default ThreadList;

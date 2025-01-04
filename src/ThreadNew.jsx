@@ -1,5 +1,5 @@
-import CreateThread from "./CreateThread";
-import ThreadHeader from "./ThreadHeader";
+import CreateThread from "./component/CreateThread";
+import ThreadHeader from "./component/ThreadHeader";
 import "./assets/css/ThreadNew.css";
 
 function ThreadNew() {

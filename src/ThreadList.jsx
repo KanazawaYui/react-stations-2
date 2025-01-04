@@ -1,5 +1,5 @@
-import ThreadHeader from "./ThreadHeader";
-import Thread from "./Thread";
+import ThreadHeader from "./component/ThreadHeader";
+import Thread from "./component/Thread";
 import "./assets/css/ThreadList.css";
 
 function ThreadList() {

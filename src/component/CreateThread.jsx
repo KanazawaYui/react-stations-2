@@ -1,4 +1,4 @@
-import "./assets/css/CreateThread.css";
+import "../assets/css/CreateThread.css";
 
 function CreateThread() {
   return (
