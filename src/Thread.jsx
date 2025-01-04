@@ -18,7 +18,7 @@ function Thread() {
 
   return (
     <div className="thread">
-      <p>新着スレッド</p>
+      <p className="subTitle">新着スレッド</p>
       <table>
         <tbody>
           {threads.map((thread, index) => {
