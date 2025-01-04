@@ -21,9 +21,9 @@ function Thread() {
       <p>新着スレッド</p>
       <table>
         <tbody>
-          {threads.map((thread) => {
+          {threads.map((thread, index) => {
             return (
-              <tr key={thread}>
+              <tr key={index}>
                 <td>{thread}</td>
               </tr>
             );
