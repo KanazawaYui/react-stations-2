@@ -6,7 +6,7 @@ import Home from "./Home";
 import ThreadNew from "./ThreadNew";
 import Threads from "./Threads";
 
-function App() {
+const App = () => {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
@@ -14,6 +14,6 @@ function App() {
       <Route path="/threads/:thread_id" element={<Threads />} />
     </Routes>
   );
-}
+};
 
 export default App;

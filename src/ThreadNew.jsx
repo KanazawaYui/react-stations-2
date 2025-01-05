@@ -2,7 +2,7 @@ import CreateThread from "./component/CreateThread";
 import ThreadHeader from "./component/ThreadHeader";
 import "./assets/css/ThreadNew.css";
 
-function ThreadNew() {
+const ThreadNew = () => {
   return (
     <div>
       <ThreadHeader />
@@ -11,6 +11,6 @@ function ThreadNew() {
       </div>
     </div>
   );
-}
+};
 
 export default ThreadNew;

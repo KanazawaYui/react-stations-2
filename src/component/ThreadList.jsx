@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import "../assets/css/ThreadList.css";
 import { useNavigate } from "react-router-dom";
 
-function ThreadList() {
+const ThreadList = () => {
   const [threads, setThreads] = useState([]);
 
   // セルをクリックしたときの遷移処理
@@ -35,6 +35,6 @@ function ThreadList() {
       </table>
     </div>
   );
-}
+};
 
 export default ThreadList;

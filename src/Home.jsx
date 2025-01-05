@@ -2,7 +2,7 @@ import ThreadHeader from "./component/ThreadHeader";
 import ThreadList from "./component/ThreadList";
 import "./assets/css/ThreadList.css";
 
-function Home() {
+const Home = () => {
   return (
     <div>
       <ThreadHeader />
@@ -11,6 +11,6 @@ function Home() {
       </div>
     </div>
   );
-}
+};
 
 export default Home;
