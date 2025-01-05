@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
-const Thread = ({ title }) => {
+const CommentList = () => {
   const [comments, setComments] = useState([]);
   const { thread_id } = useParams(); // URL から id を取得
 
@@ -17,7 +17,6 @@ const Thread = ({ title }) => {
 
   return (
     <div>
-      <p>{title}</p>
       {comments.map((comment) => {
         return <p key={comment.id}>{comment.post}</p>;
       })}
@@ -25,4 +24,4 @@ const Thread = ({ title }) => {
   );
 };
 
-export default Thread;
+export default CommentList;

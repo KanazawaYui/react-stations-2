@@ -1,11 +1,11 @@
-import Thread from "./component/Thread";
+import CommentList from "./component/CommentList";
 import ThreadHeader from "./component/ThreadHeader";
 
 const Threads = () => {
   return (
     <div>
       <ThreadHeader />
-      <Thread />
+      <CommentList />
     </div>
   );
 };
