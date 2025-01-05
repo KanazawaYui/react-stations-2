@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import "../assets/css/CommentList.css";
 
 const CommentList = () => {
   const [comments, setComments] = useState([]);
@@ -16,9 +17,13 @@ const CommentList = () => {
   });
 
   return (
-    <div>
+    <div className="commentList">
       {comments.map((comment) => {
-        return <p key={comment.id}>{comment.post}</p>;
+        return (
+          <p key={comment.id} className="comment">
+            {comment.post}
+          </p>
+        );
       })}
     </div>
   );
