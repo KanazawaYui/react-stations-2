@@ -2,7 +2,7 @@ import ThreadHeader from "./component/ThreadHeader";
 import Thread from "./component/Thread";
 import "./assets/css/ThreadList.css";
 
-function ThreadList() {
+const ThreadList = () => {
   return (
     <div>
       <ThreadHeader />
@@ -11,6 +11,6 @@ function ThreadList() {
       </div>
     </div>
   );
-}
+};
 
 export default ThreadList;

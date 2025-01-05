@@ -1,6 +1,6 @@
 import "../assets/css/ThreadHeader.css";
 
-function ThreadHeader() {
+const ThreadHeader = () => {
   return (
     <header className="threadHeader">
       <p className="title">掲示板</p>
@@ -9,6 +9,6 @@ function ThreadHeader() {
       </a>
     </header>
   );
-}
+};
 
 export default ThreadHeader;

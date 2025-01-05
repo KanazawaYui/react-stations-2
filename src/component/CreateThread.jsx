@@ -1,6 +1,6 @@
 import "../assets/css/CreateThread.css";
 
-function CreateThread() {
+const CreateThread = () => {
   return (
     <div className="create">
       <p className="subTitle">スレッド新規作成</p>
@@ -13,6 +13,6 @@ function CreateThread() {
       </div>
     </div>
   );
-}
+};
 
 export default CreateThread;
