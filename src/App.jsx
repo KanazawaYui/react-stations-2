@@ -4,7 +4,7 @@ import "./App.css";
 import ThreadHeader from "./ThreadHeader";
 import Thread from "./Thread";
 
-function App() {
+const App = () => {
   return (
     <div>
       <ThreadHeader />
@@ -13,6 +13,6 @@ function App() {
       </div>
     </div>
   );
-}
+};
 
 export default App;

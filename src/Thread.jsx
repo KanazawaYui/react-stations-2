@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "./assets/css/Thread.css";
 
-function Thread() {
+const Thread = () => {
   const [threads, setThreads] = useState([]);
 
   useEffect(() => {
@@ -32,6 +32,6 @@ function Thread() {
       </table>
     </div>
   );
-}
+};
 
 export default Thread;
