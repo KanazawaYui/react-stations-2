@@ -1,0 +1,22 @@
+.createComment {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 55%;
+  left: 75%;
+  transform: translate(-50%, -50%);
+}
+
+.inputComment {
+  width: 400px;
+  height: 150px;
+  border: none;
+  text-indent: 20px;
+}
+
+.commentButton {
+  width: 100px;
+  margin-top: 30px;
+  background-color: #66d48b;
+}
