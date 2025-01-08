@@ -1,10 +1,8 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
 import "../assets/css/CommentList.css";
 
-const CommentList = () => {
+const CommentList = (thread_id) => {
   const [comments, setComments] = useState([]);
-  const { thread_id } = useParams(); // URL から id を取得
 
   useEffect(() => {
     fetch(
