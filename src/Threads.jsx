@@ -1,4 +1,3 @@
-import CommentList from "./component/CommentList";
 import ThreadHeader from "./component/ThreadHeader";
 import Comment from "./component/Comment";
 import { useParams } from "react-router-dom";
@@ -10,7 +9,6 @@ const Threads = () => {
     <div>
       <ThreadHeader />
       <div>
-        <CommentList thread_id={thread_id} />
         <Comment thread_id={thread_id} />
       </div>
     </div>
