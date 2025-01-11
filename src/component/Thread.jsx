@@ -36,4 +36,4 @@ const Thread = () => {
   );
 };
 
-export default ThreadList;
+export default Thread;
