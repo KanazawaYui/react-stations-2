@@ -15,7 +15,13 @@ const ThreadList = () => {
     fetch("https://railway.bulletinboard.techtrain.dev/threads?offset=10")
       .then((res) => res.json())
       .then((result) => {
-        setThreads(result);
+        setThreads(
+          result
+            .map((item) => {
+              return item.title;
+            })
+            .slice(0, 7)
+        );
       });
   });
 
