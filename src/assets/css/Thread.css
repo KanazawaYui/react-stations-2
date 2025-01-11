@@ -6,6 +6,7 @@
 
 .subTitle {
   font-size: 40px;
+  margin-left: 20px;
 }
 
 table {
@@ -16,7 +17,8 @@ th,
 td {
   border: solid 1px #565656; /* 枠線指定 */
   padding: 10px; /* 余白指定 */
-  width: 400px;
+  width: 500px;
+  height: 50px;
   background-color: #fff;
-  font-size: 20px;
+  font-size: 30px;
 }

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "../assets/css/Thread.css";
 
-const ThreadList = () => {
+const Thread = () => {
   const [threads, setThreads] = useState([]);
 
   useEffect(() => {
@@ -9,9 +9,11 @@ const ThreadList = () => {
       .then((res) => res.json())
       .then((result) => {
         setThreads(
-          result.map((item) => {
-            return item.title;
-          })
+          result
+            .map((item) => {
+              return item.title;
+            })
+            .slice(0, 7)
         );
       });
   });
