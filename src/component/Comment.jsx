@@ -7,20 +7,21 @@ const Comment = ({ thread_id }) => {
 
   useEffect(() => {
     getComment();
-  });
+  }, [thread_id]);
 
   const getComment = () => {
     fetch(
-      `https://railway.bulletinboard.techtrain.dev/threads/${thread_id}/posts?offset=1`
+      `https://railway.bulletinboard.techtrain.dev/threads/${thread_id}/posts?offset=0`
     )
       .then((res) => res.json())
       .then((result) => {
-        setComments(result.posts);
+        setComments(result.posts.slice(0, 5));
       });
   };
 
   const postComment = async (e) => {
     e.preventDefault(); // ページリロードを防ぐ
+    console.log("post newComment:" + newComment);
     const response = await fetch(
       `https://railway.bulletinboard.techtrain.dev/threads/${thread_id}/posts`,
       {
