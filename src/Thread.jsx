@@ -9,9 +9,11 @@ const Thread = () => {
       .then((res) => res.json())
       .then((result) => {
         setThreads(
-          result.map((item) => {
-            return item.title;
-          })
+          result
+            .map((item) => {
+              return item.title;
+            })
+            .slice(0, 7)
         );
       });
   });
