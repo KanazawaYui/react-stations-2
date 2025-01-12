@@ -1,9 +1,9 @@
 import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
-import "./BackUp.css";
+import "./App.css";
 
-function BackUp() {
+function App() {
   const [count, setCount] = useState(0);
 
   return (
@@ -32,4 +32,4 @@ function BackUp() {
   );
 }
 
-export default BackUp;
+export default App;
