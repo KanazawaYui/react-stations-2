@@ -15,6 +15,9 @@ const Thread = () => {
             })
             .slice(0, 7)
         );
+      })
+      .catch((error) => {
+        console.log("Fetch Error: " + error);
       });
   });
 
