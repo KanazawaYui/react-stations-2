@@ -13,6 +13,9 @@ const CommentList = () => {
       .then((res) => res.json())
       .then((result) => {
         setComments(result.posts);
+      })
+      .catch((error) => {
+        console.error("Error: " + error);
       });
   });
 
