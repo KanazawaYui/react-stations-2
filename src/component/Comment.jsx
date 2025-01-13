@@ -1,17 +1,17 @@
 import "../assets/css/Comment.css";
 import { useEffect, useState } from "react";
 
-const Comment = ({ thread_id }) => {
+const Comment = ({ threadId }) => {
   const [newComment, setNewComment] = useState("");
   const [comments, setComments] = useState([]);
 
   useEffect(() => {
     getComment();
-  }, [thread_id]);
+  }, [threadId]);
 
   const getComment = () => {
     fetch(
-      `https://railway.bulletinboard.techtrain.dev/threads/${thread_id}/posts?offset=0`
+      `https://railway.bulletinboard.techtrain.dev/threads/${threadId}/posts?offset=0`
     )
       .then((res) => res.json())
       .then((result) => {
@@ -33,7 +33,7 @@ const Comment = ({ thread_id }) => {
 
     try {
       const response = await fetch(
-        `https://railway.bulletinboard.techtrain.dev/threads/${thread_id}/posts`,
+        `https://railway.bulletinboard.techtrain.dev/threads/${threadId}/posts`,
         {
           method: "POST",
           headers: {

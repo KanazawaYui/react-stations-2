@@ -7,8 +7,8 @@ const ThreadList = () => {
 
   // セルをクリックしたときの遷移処理
   const navigate = useNavigate();
-  const goToThread = (thread_id) => {
-    navigate(`/threads/${thread_id}`);
+  const goToThread = (threadId) => {
+    navigate(`/threads/${threadId}`);
   };
 
   useEffect(() => {

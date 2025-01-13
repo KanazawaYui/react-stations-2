@@ -11,7 +11,7 @@ const App = () => {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/threads/new" element={<ThreadNew />} />
-      <Route path="/threads/:thread_id" element={<Threads />} />
+      <Route path="/threads/:threadId" element={<Threads />} />
     </Routes>
   );
 };
