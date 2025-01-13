@@ -31,6 +31,10 @@
   font-size: 30px;
 }
 
+.toTop:hover {
+  color: #7dd3eb;
+}
+
 .createButton {
   background-color: #66d488;
   color: #fff;
