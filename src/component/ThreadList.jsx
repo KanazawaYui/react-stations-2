@@ -16,17 +16,16 @@ const ThreadList = () => {
       .then((res) => res.json())
       .then((result) => {
         setThreads(
-          result
-            .map((item) => {
-              return item.title;
-            })
-            .slice(0, 7)
+          result.slice(0, 7).map((item) => ({
+            id: item.id,
+            title: item.title,
+          }))
         );
       })
       .catch((error) => {
         console.log("Fetch Error: " + error);
       });
-  });
+  }, []);
 
   return (
     <div className="thread">
