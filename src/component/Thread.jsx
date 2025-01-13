@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import "./assets/css/Thread.css";
+import "../assets/css/Thread.css";
 
 const Thread = () => {
   const [threads, setThreads] = useState([]);
