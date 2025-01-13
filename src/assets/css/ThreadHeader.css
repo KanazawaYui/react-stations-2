@@ -1,0 +1,28 @@
+.threadHeader {
+  background-color: #66d48b;
+  width: 100vw;
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: fixed;
+  top: 0;
+}
+
+.title {
+  width: 252px;
+  height: 62px;
+  color: #fff;
+  font-size: 40px;
+  margin-right: auto;
+  text-align: center;
+}
+
+.createThread {
+  width: 229px;
+  color: #fff;
+  font-size: 25px;
+  margin-right: 30px;
+  text-decoration: underline;
+  text-align: center;
+}
