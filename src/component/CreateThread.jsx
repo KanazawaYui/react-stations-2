@@ -9,19 +9,32 @@ const CreateThread = () => {
 
   const createThread = async (e) => {
     e.preventDefault(); // ページリロードを防ぐ
-    const response = await fetch(API_URL, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ title: newThread }),
-    });
 
-    if (response.ok) {
-      console.log("ok");
-      setNewThread(""); // フォームをリセット
-    } else {
-      console.error("Failed to post comment");
+    // 空欄でpostされることを防ぐ
+    if (newThread.trim() === "") {
+      alert("スレッドタイトルを入力してください。");
+      return;
+    }
+
+    try {
+      const response = await fetch(API_URL, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ title: newThread }),
+      });
+
+      if (response.ok) {
+        console.log("ok");
+        setNewThread(""); // フォームをリセット
+      } else {
+        console.error("Failed to post comment");
+        alert("スレッド作成に失敗しました。もう一度行なってください。");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      alert("スレッド作成に失敗しました。もう一度行なってください。");
     }
   };
 
@@ -41,7 +54,11 @@ const CreateThread = () => {
           <a className="toTop" href="/">
             Topに戻る
           </a>
-          <button type="submit" className="createButton">
+          <button
+            type="submit"
+            className="createButton"
+            onClick={(e) => e.target.blur()}
+          >
             作成
           </button>
         </div>
