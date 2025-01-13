@@ -18,7 +18,7 @@ const Thread = () => {
       .catch((error) => {
         console.log("Fetch Error: " + error);
       });
-  });
+  }, []);
 
   return (
     <div className="thread">
