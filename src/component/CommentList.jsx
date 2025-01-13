@@ -8,7 +8,7 @@ const CommentList = () => {
 
   useEffect(() => {
     fetch(
-      `https://railway.bulletinboard.techtrain.dev/threads/${thread_id}/posts?offset=1`
+      `https://railway.bulletinboard.techtrain.dev/threads/${thread_id}/posts?offset=0`
     )
       .then((res) => res.json())
       .then((result) => {
@@ -21,13 +21,17 @@ const CommentList = () => {
 
   return (
     <div className="commentList">
-      {comments.map((comment) => {
-        return (
-          <p key={comment.id} className="comment">
-            {comment.post}
-          </p>
-        );
-      })}
+      {comments.length === 0 ? (
+        <p className="noComment">コメントはありません</p>
+      ) : (
+        comments.map((comment) => {
+          return (
+            <p key={comment.id} className="comment">
+              {comment.post}
+            </p>
+          );
+        })
+      )}
     </div>
   );
 };
