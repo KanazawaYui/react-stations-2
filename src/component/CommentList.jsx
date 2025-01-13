@@ -4,11 +4,11 @@ import "../assets/css/CommentList.css";
 
 const CommentList = () => {
   const [comments, setComments] = useState([]);
-  const { thread_id } = useParams(); // URL から id を取得
+  const { threadId } = useParams(); // URL から id を取得
 
   useEffect(() => {
     fetch(
-      `https://railway.bulletinboard.techtrain.dev/threads/${thread_id}/posts?offset=0`
+      `https://railway.bulletinboard.techtrain.dev/threads/${threadId}/posts?offset=0`
     )
       .then((res) => res.json())
       .then((result) => {
