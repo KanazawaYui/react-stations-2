@@ -8,9 +8,7 @@ const Threads = () => {
   return (
     <div>
       <ThreadHeader />
-      <div>
-        <Comment thread_id={thread_id} />
-      </div>
+      <Comment thread_id={thread_id} />
     </div>
   );
 };

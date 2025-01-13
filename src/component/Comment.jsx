@@ -60,13 +60,17 @@ const Comment = ({ thread_id }) => {
   return (
     <div>
       <div className="commentList">
-        {comments.map((comment) => {
-          return (
-            <p key={comment.id} className="comment">
-              {comment.post}
-            </p>
-          );
-        })}
+        {comments.length === 0 ? (
+          <p className="noComment">コメントはありません</p>
+        ) : (
+          comments.map((comment) => {
+            return (
+              <p key={comment.id} className="comment">
+                {comment.post}
+              </p>
+            );
+          })
+        )}
       </div>
       <div className="createComment">
         <form onSubmit={postComment}>
@@ -76,7 +80,11 @@ const Comment = ({ thread_id }) => {
             onChange={(e) => setNewComment(e.target.value)}
             placeholder="投稿しよう！"
           />
-          <button type="submit" className="commentButton">
+          <button
+            type="submit"
+            className="commentButton"
+            onClick={(e) => e.target.blur()}
+          >
             投稿
           </button>
         </form>
