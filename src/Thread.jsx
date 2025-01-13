@@ -9,11 +9,10 @@ const Thread = () => {
       .then((res) => res.json())
       .then((result) => {
         setThreads(
-          result
-            .map((item) => {
-              return item.title;
-            })
-            .slice(-7)
+          result.slice(0, 7).map((item) => ({
+            id: item.id,
+            title: item.title,
+          }))
         );
       })
       .catch((error) => {
@@ -26,10 +25,10 @@ const Thread = () => {
       <p className="subTitle">新着スレッド</p>
       <table>
         <tbody>
-          {threads.map((thread, index) => {
+          {threads.map((thread) => {
             return (
-              <tr key={index}>
-                <td>{thread}</td>
+              <tr key={thread.id}>
+                <td>{thread.title}</td>
               </tr>
             );
           })}
