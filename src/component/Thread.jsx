@@ -9,7 +9,7 @@ const Thread = () => {
       .then((res) => res.json())
       .then((result) => {
         setThreads(
-          result.slice(0, 7).map((item) => ({
+          result.slice(-7).map((item) => ({
             id: item.id,
             title: item.title,
           }))
