@@ -13,7 +13,7 @@ const Thread = () => {
             .map((item) => {
               return item.title;
             })
-            .slice(0, 7)
+            .slice(-7)
         );
       })
       .catch((error) => {
