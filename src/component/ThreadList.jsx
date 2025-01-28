@@ -1,8 +1,15 @@
 import { useEffect, useState } from "react";
-import "../assets/css/Thread.css";
+import "../assets/css/ThreadList.css";
+import { useNavigate } from "react-router-dom";
 
-const Thread = () => {
+const ThreadList = () => {
   const [threads, setThreads] = useState([]);
+
+  // セルをクリックしたときの遷移処理
+  const navigate = useNavigate();
+  const goToThread = (threadId) => {
+    navigate(`/threads/${threadId}`);
+  };
 
   useEffect(() => {
     fetch("https://railway.bulletinboard.techtrain.dev/threads?offset=10")
@@ -28,7 +35,7 @@ const Thread = () => {
           {threads.map((thread) => {
             return (
               <tr key={thread.id}>
-                <td>{thread.title}</td>
+                <td onClick={() => goToThread(thread.id)}>{thread.title}</td>
               </tr>
             );
           })}
@@ -38,4 +45,4 @@ const Thread = () => {
   );
 };
 
-export default Thread;
+export default ThreadList;

@@ -2,14 +2,16 @@ import { useState } from "react";
 import "./App.css";
 
 import { Route, Routes } from "react-router-dom";
-import ThreadList from "./ThreadList";
+import Home from "./Home";
 import ThreadNew from "./ThreadNew";
+import Threads from "./Threads";
 
 const App = () => {
   return (
     <Routes>
-      <Route path="/" element={<ThreadList />} />
+      <Route path="/" element={<Home />} />
       <Route path="/threads/new" element={<ThreadNew />} />
+      <Route path="/threads/:threadId" element={<Threads />} />
     </Routes>
   );
 };

@@ -1,10 +1,22 @@
-.threadTable {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.thread {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
-body {
-  background-color: #ebebeb;
+.subTitle {
+  font-size: 40px;
+}
+
+table {
+  border-collapse: collapse; /* セルの線を重ねる */
+}
+
+th,
+td {
+  border: solid 1px #565656; /* 枠線指定 */
+  padding: 10px; /* 余白指定 */
+  width: 400px;
+  background-color: #fff;
+  font-size: 20px;
 }

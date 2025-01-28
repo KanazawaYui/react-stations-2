@@ -1,16 +1,16 @@
 import ThreadHeader from "./component/ThreadHeader";
-import Thread from "./component/Thread";
+import ThreadList from "./component/ThreadList";
 import "./assets/css/ThreadList.css";
 
-const ThreadList = () => {
+const Home = () => {
   return (
     <div>
       <ThreadHeader />
       <div className="threadTable">
-        <Thread />
+        <ThreadList />
       </div>
     </div>
   );
 };
 
-export default ThreadList;
+export default Home;
